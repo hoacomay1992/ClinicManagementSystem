@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "sass --watch src/resources/scss/app.scss src/public/css/app.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "beautiful": "prettier --write --single-quote --trailing-comma all"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,17 @@
   "homepage": "https://github.com/hoacomay1992/ClinicManagementSystem#readme",
   "dependencies": {
     "express": "^4.21.0",
+    "express-handlebars": "^8.0.1",
+    "handlebars": "^4.7.8",
+    "mongoose": "^8.7.0",
+    "mongoose-slug-generator": "^1.0.4",
     "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "morgan": "^1.10.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.79.4"
   }
 }
